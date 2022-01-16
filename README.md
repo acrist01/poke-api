@@ -61,7 +61,7 @@ Also, you would require the .env file in the `app` directory.
 
 You should now be able to test the application locally, on `http://localhost:5000`
 
-2. Testing
+2. Testing <br />
 We only added unit tests, but for a production environment, these would not suffice. We would also add integration and e2e tests.
     - open up your terminal window(or GitBash) if running on Windows
     - move into the app directory: run `cd app` <br />
