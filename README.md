@@ -50,8 +50,8 @@ Returns details of the required pokemon
 
 Installation and testing
 ------------------------
-In order to run this project locally, you need to have docker installed. Find more [here](https://www.docker.com/get-started)
-Also, you would require the .env file in the `app` directory. 
+In order to run this project locally, you need to have docker installed. Find more [here](https://www.docker.com/get-started) <br />
+Also, you would need to create an .env file in the `app` directory. Paste in there the environment variables
 
 1. Setup project locally
     - open up your terminal window(or GitBash if running on Windows)
