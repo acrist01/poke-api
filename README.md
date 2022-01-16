@@ -62,8 +62,9 @@ Also, you would require the .env file in the `app` directory.
 You should now be able to test the application locally, on `http://localhost:5000`
 
 2. Testing
+We only added unit tests, but for a production environment, these would not suffice. We would also add integration and e2e tests.
     - open up your terminal window(or GitBash) if running on Windows
-    - move into the app directory: run `cd app`
+    - move into the app directory: run `cd app` <br />
     At this point, there are two options: <br />
         a) Install python3 locally, choosing the best option for your machine. Find more [here](https://www.python.org/downloads/) <br />
             - install the dependencies locally: run `pip3 install -r requirements.txt` <br />
