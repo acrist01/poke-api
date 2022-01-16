@@ -56,8 +56,8 @@ Also, you would require the .env file in the `app` directory.
 1. Setup project locally
     - open up your terminal window(or GitBash if running on Windows)
     - move into the app directory: run `cd app`
-    - build the image locally: run `docker build --no-cache --tag <image_name> .`
     - spin up the application locally: run `docker-compose up -d`
+    - if you want to shut the application down, run `docker-compoer down`
 
 You should now be able to test the application locally, on `http://localhost:5000`
 
