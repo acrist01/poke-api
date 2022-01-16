@@ -38,3 +38,7 @@ def get_pokemon(name):
 def get_translated_pokemon(name):
     return pokemon_controller.get_translated(name)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return {'status': 404, 'message': 'Page not found'}
+
