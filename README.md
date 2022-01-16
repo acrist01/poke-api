@@ -1,11 +1,59 @@
 Poke Api
 =========
 
+Description
+-----------
+I have developped my own 'Pokedex' in the form of a REST API that return pokemon information. I am using existing public APIs ('https://pokeapi.co/' and 'https://funtranslations.com/') to do the heavy-lifting. 
+
+
+## API Endpoints
+### Get Pokemon Details [GET /pokemon/<name>]
+
+Returns details of the required pokemon
+
++ Response 200 (application/json)
+
+       {
+            'name': 'Pokemon name',
+            'description': 'Pokemon description',
+            'habitat': 'Pokemon habitat,
+            'isLegendary': True/False
+        }
+
++ Response 404 (application/json)
+
+        {
+            "message": "Pokemon not found",
+            "status": 404
+        }
+
+### Get pokemon details with translated description [GET /pokemon/translated/<name>]
+
+Returns details of the required pokemon
+
++ Response 200 (application/json)
+
+       {
+            'name': 'Pokemon name',
+            'description': 'Pokemon description translated',
+            'habitat': 'Pokemon habitat,
+            'isLegendary': True/False
+        }
+
++ Response 404 (application/json)
+
+        {
+            "message": "Pokemon not found",
+            "status": 404
+        }
+
+
 Installation and testing
 ------------------------
+In order to run this project locally, you need to have docker installed. Find more [here](https://www.docker.com/get-started)
 
 1. Setup project locally
-    - open up your terminal window(or GitBash) if running on Windows
+    - open up your terminal window(or GitBash if running on Windows)
     - move into the app directory: run `cd app`
     - build the image locally: run `docker build --no-cache --tag <image_name> .`
     - spin up the application locally: run `docker-compose up -d`
@@ -17,11 +65,11 @@ You should now be able to test the application locally, on `http://localhost:500
     - move into the app directory: run `cd app`
     At this point, there are two options:
         a) Install python3 locally, choosing the best option for your machine. Find more [here](https://www.python.org/downloads/)
-            * install the dependencies locally: run `pip3 install -r requirements.txt`
+            - install the dependencies locally: run `pip3 install -r requirements.txt`
         OR 
         b) get inside your docker container:
-            * get container id: run `docker ps` and copy the container id associated with the app_pokedex_docker image
-            * get inside the box: run `docker exec -it <container_id> bash`
+            - get container id: run `docker ps` and copy the container id associated with the app_pokedex_docker image
+            - get inside the box: run `docker exec -it <container_id> bash`
     Whichever option you chose, you should be able to:
     - Run tests: run `python -m unittest`
     - Check tests coverage : run `coverage report -m`
