@@ -3,7 +3,7 @@ Poke Api
 
 Description
 -----------
-I have developed a very basic 'Pokedex' applicaiton in the form of a REST API that return pokemon information. I am using existing public APIs ('https://pokeapi.co/' and 'https://funtranslations.com/') to do the heavy-lifting. 
+I have developed a very basic 'Pokedex' application in the form of a REST API that return pokemon information. I am using existing public APIs ('https://pokeapi.co/' and 'https://funtranslations.com/') to do the heavy-lifting. 
 
 
 ## API Endpoints
