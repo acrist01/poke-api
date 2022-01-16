@@ -3,7 +3,7 @@ Poke Api
 
 Description
 -----------
-I have developped my own 'Pokedex' in the form of a REST API that return pokemon information. I am using existing public APIs ('https://pokeapi.co/' and 'https://funtranslations.com/') to do the heavy-lifting. 
+I have developed a very basic 'Pokedex' applicaiton in the form of a REST API that return pokemon information. I am using existing public APIs ('https://pokeapi.co/' and 'https://funtranslations.com/') to do the heavy-lifting. 
 
 
 ## API Endpoints
@@ -51,6 +51,7 @@ Returns details of the required pokemon
 Installation and testing
 ------------------------
 In order to run this project locally, you need to have docker installed. Find more [here](https://www.docker.com/get-started)
+Also, you would require the .env file in the `app` directory. 
 
 1. Setup project locally
     - open up your terminal window(or GitBash if running on Windows)
@@ -63,13 +64,13 @@ You should now be able to test the application locally, on `http://localhost:500
 2. Testing
     - open up your terminal window(or GitBash) if running on Windows
     - move into the app directory: run `cd app`
-    At this point, there are two options:
-        a) Install python3 locally, choosing the best option for your machine. Find more [here](https://www.python.org/downloads/)
-            - install the dependencies locally: run `pip3 install -r requirements.txt`
-        OR 
-        b) get inside your docker container:
-            - get container id: run `docker ps` and copy the container id associated with the app_pokedex_docker image
-            - get inside the box: run `docker exec -it <container_id> bash`
+    At this point, there are two options: <br />
+        a) Install python3 locally, choosing the best option for your machine. Find more [here](https://www.python.org/downloads/) <br />
+            - install the dependencies locally: run `pip3 install -r requirements.txt` <br />
+        OR <br />
+        b) get inside your docker container: <br />
+            - get container id: run `docker ps` and copy the container id associated with the app_pokedex_docker image <br />
+            - get inside the box: run `docker exec -it <container_id> bash` <br />
     Whichever option you chose, you should be able to:
     - Run tests: run `python -m unittest`
     - Check tests coverage : run `coverage report -m`
@@ -83,5 +84,5 @@ Caveats
     - I tried getting in touch with them for some clarification on their api, but with no success so far. For production, I would need to have an answer from them. 
 
 2. Pokemon service
-    - The get description method replaces `\n` and `\f` characters with empty spaces, but because sometimes the `https://pokeapi.co/api/v2/pokemon-species/` endpoint returns there characters inside the words, there are cases where words are split. It was a conscious decision, otherwise we would have had many words with no spaces between them.
+    - The get description method replaces `\n` and `\f` characters with empty spaces, but because sometimes the `https://pokeapi.co/api/v2/pokemon-species/` endpoint returns these characters inside the words, there are cases where words are split. It was a conscious decision, otherwise we would have had many words with no spaces between them.
 
